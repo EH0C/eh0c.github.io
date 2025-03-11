@@ -54,7 +54,7 @@ navbar-links:
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
   # email: "someone@example.com"
-  rss: true  # remove this line if you don't want to show an RSS link at the bottom
+  # rss: true  # remove this line if you don't want to show an RSS link at the bottom
   linkedin: edoardo-herianto
   # facebook: deanattali
   # github: daattali
