@@ -22,8 +22,8 @@ author: Edoardo Herianto
 navbar-links:
   About Me: "aboutme"
   Projects: "projects"
-  Dropdown Projects:
-     - Apache Kafka: "2020-02-26-flake-it-till-you-make-it"
+  # Dropdown Projects:
+  #    - Apache Kafka: "2020-02-26-flake-it-till-you-make-it"
   # Resources:
   #   - Beautiful Jekyll: "https://beautifuljekyll.com"
   #   - Learn markdown: "https://www.markdowntutorial.com/"
