@@ -1,5 +1,5 @@
 ---
 layout: home
 title: Projects
-subtitle: 
+subtitle: These are data science projects I have done
 ---
