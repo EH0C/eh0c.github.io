@@ -4,6 +4,8 @@ title: About me
 subtitle: A Data Analyst, Scientist, Engineer
 ---
 
+![hello](/assets/img/hello.gif)
+
 Hi, I’m Edoardo, a Data Analyst specializing in ETL pipelines and Data Streaming. I hold a B.S. in Business Analytics and Information Systems from Suffolk University and have hands-on experience with Database Systems (MariaDB, Postgres) and Python (Pandas, PySpark, SQLAlchemy). I collaborate with engineers and analysts to transform raw data into insights, building dashboards with Metabase and Tableau.
 
 ### Links:
