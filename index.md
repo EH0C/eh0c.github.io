@@ -4,7 +4,7 @@ title: My Portfolio
 subtitle: Welcome to Edoardo Herianto's Portfolio!
 ---
 
-![Crepe](/assets/img/1.gif)
+![Crepe](/assets/img/2.gif)
 - 📍 Jakarta Metropolitan Area
 - Data Analyst / Data Scientist / Data Engineer
 - 2+ Years of Experience in ETL and Data Pipelines
