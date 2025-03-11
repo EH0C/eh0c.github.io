@@ -9,7 +9,9 @@ subtitle: Welcome to Edoardo Herianto's Portfolio!
 - Data Analyst / Data Scientist / Data Engineer
 - 2+ Years of Experience in ETL and Data Pipelines
 - Built and Maintained Containerized Data Infrastructure (Docker & Kubernetes)
-- <details markdown="1"> <summarySkills</summary> - python - sql </details>
+<details markdown="1"> <summarySkills</summary> 
+  - python 
+  - sql </details>
 
 ## Projects:
 ---
