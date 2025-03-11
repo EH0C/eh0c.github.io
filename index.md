@@ -7,8 +7,8 @@ subtitle: Welcome to Edoardo Herianto's Portfolio!
 ![Crepe](/assets/img/2.gif)
 - 📍 Jakarta Metropolitan Area
 - Data Analyst / Data Scientist / Data Engineer
-- 2+ Years of Experience in ETL and Data Pipelines
-- Proficient in Python Libraries (Pandas, Pyspark, SQLAlchemy), SQL
+- 2+ Years of Experience in Python and SQL
+- Built dashboards using Metabase and Tableau
 - Built and Maintained Containerized Data Infrastructure (Docker & Kubernetes)
 
 ## Projects:
