@@ -10,6 +10,7 @@ Hi, I’m Edoardo, a Data Analyst specializing in ETL pipelines and Data Streami
 
 <div style="border: 1px solid black; padding: 10px">
 Education: Suffolk University
+
 Degreee: Data Analytics
 </div>
 
