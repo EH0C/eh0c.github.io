@@ -15,6 +15,5 @@ subtitle: Welcome to Edoardo Herianto's Portfolio!
 
 ---
 
-<div style="text-align: center; margin-top: 40px;">
-  <h1 style="font-size: 54px;">Projects</h1>
-</div>
+<title>Projects</title>
+  <meta name="description" content="Data Science Projects I've Done">
