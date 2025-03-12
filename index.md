@@ -16,4 +16,6 @@ subtitle: Welcome to Edoardo Herianto's Portfolio!
 <br>
 <br>
 
-# Projects
+<div class="home-heading">
+  <h1>Projects</h1>
+</div>
