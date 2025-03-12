@@ -15,5 +15,8 @@ subtitle: Welcome to Edoardo Herianto's Portfolio!
 
 ---
 
-<title>Projects</title>
-  <meta name="description" content="Data Science Projects I've Done">
+<div class="page-heading"> == $0
+  <h1>Projects</h1>
+  <hr class="small">
+  <span class="page-subheading">These are my projects</span>
+</div>
