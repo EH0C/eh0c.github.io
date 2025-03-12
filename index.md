@@ -6,8 +6,6 @@ subtitle: Welcome to Edoardo Herianto's Portfolio!
 
 ![Crepe](/assets/img/2.gif)
 
-{: .box-note}
-
 > **📍 Jakarta Metropolitan Area**  
 > **Data Analyst / Data Scientist / Data Engineer**  
 > **Bachelor's in Business Analytics and Information Systems**  
