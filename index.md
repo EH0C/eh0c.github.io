@@ -15,7 +15,7 @@ subtitle: Welcome to Edoardo Herianto's Portfolio!
 
 ---
 
-<div class="page-heading"> == $0
+<div class="page-heading"> 
   <h1>Projects</h1>
   <hr class="small">
   <span class="page-subheading">These are my projects</span>
