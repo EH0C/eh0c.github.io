@@ -15,8 +15,8 @@ subtitle: Welcome to Edoardo Herianto's Portfolio!
 
 ---
 
-<div class="page-heading"> 
+<div align="center">
   <h1>Projects</h1>
-  <hr class="small">
-  <span class="page-subheading">These are my projects</span>
+  <hr style="width:50%; border:1px solid #ccc;">
+  <span style="font-size:1.2rem; color:#666;">These are my projects</span>
 </div>
