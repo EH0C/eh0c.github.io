@@ -14,7 +14,7 @@ Hi, I’m Edoardo, a Data Analyst specializing in ETL pipelines and Data Streami
     border-radius: 10px; 
     background: #f9f9f9; 
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); 
-    max-width: 500px; 
+    max-width: 550px; 
     font-family: Arial, sans-serif;">
     
     <h2 style="margin-top: 0; color: #333;">Education</h2>
