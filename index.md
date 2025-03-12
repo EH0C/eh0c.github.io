@@ -14,5 +14,5 @@ subtitle: Welcome to Edoardo Herianto's Portfolio!
 > **- Built and Maintained Containerized Data Infrastructure (Docker & Kubernetes)**
 
 <div style="text-align: center; margin-top: 40px;">
-  <h1>Projects</h1>
+  <h1 style="font-size: 48px;">Projects</h1>
 </div>
