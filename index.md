@@ -16,6 +16,4 @@ subtitle: Welcome to Edoardo Herianto's Portfolio!
 <br>
 <br>
 
----
-title: Projects
----
+# Projects
