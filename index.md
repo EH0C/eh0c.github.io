@@ -13,5 +13,6 @@ subtitle: Welcome to Edoardo Herianto's Portfolio!
 > **- Built dashboards using Metabase and Tableau**  
 > **- Built and Maintained Containerized Data Infrastructure (Docker & Kubernetes)**
 
+<p></p>
 ## Projects:
 ---
