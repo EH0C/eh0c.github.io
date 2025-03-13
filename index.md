@@ -13,10 +13,9 @@ subtitle: Welcome to my Data Science Portfolio!
   <hr class="small">
 </div>
 
-![Crepe](/assets/img/tools.png)
+## Technical Skills
 
-{: .box-note}
-🚀 Data Engineer / Data Scientist / Data Analyst: br> I specialize in building scalable data pipelines using Python, SQL, and Apache Spark.
+![Crepe](/assets/img/tools.png)
 
 <div style="
     border: 2px solid #333; 
