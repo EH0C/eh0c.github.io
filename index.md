@@ -30,8 +30,7 @@ subtitle: Welcome to my Data Science Portfolio!
     <p style="margin: 5px 0; font-weight: bold;">E2PAY, Jakarta, Indonesia</p>
     <p style="margin: 0; color: #555;">Data Analyst</p>
     <p style="margin: 5px 0; font-style: italic; color: #777;">September 2023 – Present</p>
-</div>
-<br>
+</div> <br>
 <div style="
     border: 2px solid #333; 
     padding: 15px; 
