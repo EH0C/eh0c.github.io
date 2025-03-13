@@ -13,7 +13,7 @@ subtitle: Welcome to my Data Science Portfolio!
   <hr class="small">
 </div>
 
-## Technical Skills
+## Technical Skills:
 
 ![Crepe](/assets/img/tools.png)
 
