@@ -37,7 +37,7 @@ subtitle: A Data Analyst, Scientist, Engineer
     <h2 style="margin-top: 0; color: #333;">Education</h2>
     <p style="margin: 5px 0; font-weight: bold;">Suffolk University, Boston, MA</p>
     <p style="margin: 0; color: #555;">Bachelor’s Degree in Business Analytics and Information Systems</p>
-    <p style="margin: 5px 0; font-style: italic; color: #777;">2019 - 2023</p>
+    <p style="margin: 5px 0; font-style: italic; color: #777;">September 2019 - May 2023</p>
 </div>
 
 ## *Resume:*
