@@ -40,3 +40,8 @@ subtitle: A Data Analyst, Scientist, Engineer
     <p style="margin: 5px 0; font-style: italic; color: #777;">2019 - 2023</p>
 </div>
 
+## *Resume:*
+
+[![Description](path/to/resumelogo.jpg)](assets/RESUME.pdf)
+
+
