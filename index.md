@@ -6,6 +6,9 @@ subtitle: Welcome to my Data Science Portfolio
 
 ![Crepe](/assets/img/2.gif)
 
+{: .box-warning}
+**Warning:** This is a warning box.
+
 ---
 
 <div style="text-align: center; margin-top: 40px;">
