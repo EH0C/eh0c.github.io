@@ -17,6 +17,13 @@ subtitle: Welcome to my Data Science Portfolio!
 
 ![Crepe](/assets/img/tools.png)
 
+<div style="border: 1px solid #ddd; padding: 10px; border-radius: 5px; background-color: #f9f9f9; max-width: 400px;">
+  <h2 style="margin-top: 0; color: #333;">Work Experience</h2>
+  <p style="margin: 5px 0; font-weight: bold;">E2PAY, Jakarta, Indonesia</p>
+  <p style="margin: 0; color: #555;">Data Analyst</p>
+  <p style="margin: 5px 0; font-style: italic; color: #777;">September 2023 – Present</p>
+</div>
+
 <div style="
     border: 2px solid #333; 
     padding: 15px; 
