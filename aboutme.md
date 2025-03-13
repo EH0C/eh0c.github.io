@@ -42,6 +42,6 @@ subtitle: A Data Analyst, Scientist, Engineer
 
 ## *Resume:*
 
-[![Description](path/to/resumelogo.jpg)](assets/RESUME.pdf)
+[![Description](assets/img/resumelogo.jpg)](assets/RESUME.pdf)
 
 
