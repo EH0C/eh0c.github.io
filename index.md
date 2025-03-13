@@ -1,7 +1,7 @@
 ---
 layout: home
-title: Hello World!
-subtitle: Welcome to Edoardo Herianto's Portfolio!
+title: Hello World 🌍 
+subtitle: Welcome to my Data Science Portfolio!
 ---
 
 ![Crepe](/assets/img/2.gif)
