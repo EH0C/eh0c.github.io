@@ -13,6 +13,8 @@ subtitle: Welcome to Edoardo Herianto's Portfolio!
   <hr class="small">
 </div>
 
+![Crepe](/assets/img/tools.png)
+
 <div style="
     border: 2px solid #333; 
     padding: 15px; 
