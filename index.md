@@ -47,13 +47,6 @@ subtitle: Welcome to my Data Science Portfolio
     <p style="margin: 5px 0; font-style: italic; color: #777;">2019 - 2023</p>
 </div>
 
----
-
-<div style="text-align: center; margin-top: 40px;">
-  <h1 style="font-size: 54px;">Projects</h1>
-  <hr class="small">
-</div>
-
 ## *Resume:*
 
 [![Description](assets/img/resumelogo.png)](/assets/RESUME.pdf)
@@ -61,4 +54,11 @@ subtitle: Welcome to my Data Science Portfolio
 ## *linkedin:*
 
 [![linkedin](assets/img/linkedinlogo.png)](https://www.linkedin.com/in/edoardo-herianto/)
+
+---
+
+<div style="text-align: center; margin-top: 40px;">
+  <h1 style="font-size: 54px;">Projects</h1>
+  <hr class="small">
+</div>
 
