@@ -23,4 +23,3 @@ Hi, I’m Edoardo, a Data Analyst specializing in ETL pipelines and Data Streami
     <p style="margin: 5px 0; font-style: italic; color: #777;">2019 - 2023</p>
 </div>
 
-  linkedin: edoardo-herianto
