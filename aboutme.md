@@ -6,7 +6,7 @@ subtitle: A Data Analyst, Scientist, Engineer
 
 ![Crepe](/assets/img/3.gif)
 
-## Technical Skills:
+## *Technical Skills:*
 
 ![Crepe](/assets/img/tools.png)
 
