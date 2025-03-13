@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Hello World 🌍 
+title: Hello W🌍rld 
 subtitle: Welcome to my Data Science Portfolio!
 ---
 
