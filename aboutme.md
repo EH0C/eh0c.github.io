@@ -44,4 +44,7 @@ subtitle: A Data Analyst, Scientist, Engineer
 
 [![Description](assets/img/resumelogo.png)](/assets/RESUME.pdf)
 
+## *linkedin:*
+
+[![linkedin](assets/img/linkedinlogo.png)]([/assets/RESUME.pdf](https://www.linkedin.com/in/edoardo-herianto/))
 
