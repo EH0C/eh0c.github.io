@@ -15,6 +15,14 @@ subtitle: Welcome to Edoardo Herianto's Portfolio!
 ---
 
 <div style="text-align: center; margin-top: 40px;">
+  <h1 style="font-size: 54px;">About Me</h1>
+  <hr class="small">
+</div>
+
+
+---
+
+<div style="text-align: center; margin-top: 40px;">
   <h1 style="font-size: 54px;">Projects</h1>
   <hr class="small">
 </div>
