@@ -16,8 +16,7 @@ subtitle: Welcome to my Data Science Portfolio!
 ![Crepe](/assets/img/tools.png)
 
 {: .box-note}
-**🚀 Data Engineer | Data Scientist | Data Analyst ** <br>
-I specialize in building scalable data pipelines using Python, SQL, and Apache Spark.
+🚀 Data Engineer | Data Scientist | Data Analyst: I specialize in building scalable data pipelines using Python, SQL, and Apache Spark.
 
 <div style="
     border: 2px solid #333; 
