@@ -1,6 +1,6 @@
 ---
 layout: home
-title: My Portfolio
+title: Hello World!
 subtitle: Welcome to Edoardo Herianto's Portfolio!
 ---
 
