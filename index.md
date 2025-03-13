@@ -7,7 +7,7 @@ subtitle: Welcome to my Data Science Portfolio
 ![Crepe](/assets/img/2.gif)
 
 {: .box-warning}
-**Warning:** This is a warning box.
+**Warning:** This website is still under construction. 🏗️
 
 ---
 
