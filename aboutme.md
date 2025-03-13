@@ -26,5 +26,4 @@ Hi, I’m Edoardo, a Data Analyst specializing in ETL pipelines and Data Streami
 
 
 ### Links:
-
-- [linkedin](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29)
+  linkedin: edoardo-herianto
