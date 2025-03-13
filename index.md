@@ -54,4 +54,11 @@ subtitle: Welcome to my Data Science Portfolio
   <hr class="small">
 </div>
 
+## *Resume:*
+
+[![Description](assets/img/resumelogo.png)](/assets/RESUME.pdf)
+
+## *linkedin:*
+
+[![linkedin](assets/img/linkedinlogo.png)](https://www.linkedin.com/in/edoardo-herianto/)
 
