@@ -22,6 +22,12 @@ body {
   margin: 0;
 }
 
+.highlight {
+    background-color: #64ffda;
+    color: #000; /* text color inside highlight */
+    padding: 0 8px;
+}
+
 #hero-backup h3 {
   font-size: 1.5em;
   margin: 0;
