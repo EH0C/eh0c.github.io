@@ -39,26 +39,6 @@ body {
   height: 70vh; /* smaller than 100vh */
 }
 
-/* Credentials section closer to cube */
-#credentials {
-  margin-top: 0;
-  padding: 30px 20px; /* smaller padding */
-  background: #000;
-  text-align: center;
-}
-
-#credentials h2 {
-  font-size: 2em;
-  color: #64ffda;
-  margin-bottom: 15px;
-}
-
-#credentials ul {
-  list-style: none;
-  padding: 0;
-  font-size: 1.2em;
-}
-
 /* Skills Grid */
 .skills-grid {
     display: grid;
