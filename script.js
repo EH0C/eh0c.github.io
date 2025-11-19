@@ -26,15 +26,11 @@ function createTextTexture(text, bgColor = '#3d3d3dff', textColor = '#ffffff') {
     return new THREE.CanvasTexture(canvas);
 }
 
-// Cube materials
-const materials = [
-    new THREE.MeshBasicMaterial({ map: createTextTexture('(ಥ‿ಥ)') }),
-    new THREE.MeshBasicMaterial({ map: createTextTexture('(Θ︹Θ)') }),
-    new THREE.MeshBasicMaterial({ map: createTextTexture('( ͡° ͜ʖ ͡° )') }),
-    new THREE.MeshBasicMaterial({ map: createTextTexture('(ᗒᗣᗕ)') }),
-    new THREE.MeshBasicMaterial({ map: createTextTexture('(⌐■_■)') }),
-    new THREE.MeshBasicMaterial({ map: createTextTexture('(●´⌓`●)') })
-];
+// Default cube texts
+const defaultTexts = ['(ಥ‿ಥ)', '(Θ︹Θ)', '( ͡° ͜ʖ ͡° )', '(ᗒᗣᗕ)', '(⌐■_■)', '(●´⌓`●)'];
+
+// Create initial cube materials
+let materials = defaultTexts.map(txt => new THREE.MeshBasicMaterial({ map: createTextTexture(txt) }));
 
 // Cube setup
 const geometry = new THREE.BoxGeometry();
@@ -76,6 +72,31 @@ let velocity = new THREE.Vector3(
     0
 );
 
+// Spin and flash state
+let spinBoost = 0;
+let flashTimer = 0;
+let flashTexture = null;
+
+// Map skills to messages
+const skillMap = {
+    "HTML / CSS": "(HTML/CSS!)",
+    "JavaScript": "(JS!)",
+    "Python": "(Python!)",
+    "SQL": "(SQL!)"
+};
+
+// Click listeners to change all faces
+document.querySelectorAll('.skill').forEach(skill => {
+    skill.addEventListener('click', () => {
+        const skillText = skill.textContent.trim();
+        if (skillMap[skillText]) {
+            flashTexture = createTextTexture(skillMap[skillText]);
+            flashTimer = 20;  // show for ~20 frames
+            spinBoost = 0.05; // temporary rotation boost
+        }
+    });
+});
+
 // Animation loop
 function animate() {
     requestAnimationFrame(animate);
@@ -85,8 +106,8 @@ function animate() {
 
     // Constant rotation
     const ROTATION_SPEED = 0.01;
-    cube.rotation.x += ROTATION_SPEED;
-    cube.rotation.y += ROTATION_SPEED;
+    cube.rotation.x += ROTATION_SPEED + spinBoost;
+    cube.rotation.y += ROTATION_SPEED + spinBoost;
 
     // Extra rotation on mobile
     if (isMobile && Math.abs(touchDelta) > 0) {
@@ -110,6 +131,20 @@ function animate() {
     // Clamp velocity
     velocity.x = THREE.MathUtils.clamp(velocity.x, -0.01, 0.01);
     velocity.y = THREE.MathUtils.clamp(velocity.y, -0.01, 0.01);
+
+    // Flash / change all faces
+    if (flashTimer > 0 && flashTexture) {
+        for (let i = 0; i < cube.material.length; i++) {
+            cube.material[i].map = flashTexture;
+        }
+        flashTimer--;
+    } else {
+        // Restore default texts
+        for (let i = 0; i < cube.material.length; i++) {
+            cube.material[i].map = createTextTexture(defaultTexts[i]);
+        }
+        spinBoost *= 0.95; // decay rotation boost
+    }
 
     renderer.render(scene, camera);
 }
