@@ -1,4 +1,4 @@
-// Scene, camera, renderer
+// Scene, Camera, Renderer
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
     75,
@@ -6,13 +6,12 @@ const camera = new THREE.PerspectiveCamera(
     0.1,
     1000
 );
-
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById('container').appendChild(renderer.domElement);
 
-// Helper: create a canvas texture from text
-function createTextTexture(text, bgColor = '#3d3d3dff', textColor = '#000000') {
+// Helper: Create canvas texture with text
+function createTextTexture(text, bgColor = '#3d3d3dff', textColor = '#ffffff') {
     const canvas = document.createElement('canvas');
     canvas.width = 256;
     canvas.height = 256;
@@ -27,14 +26,14 @@ function createTextTexture(text, bgColor = '#3d3d3dff', textColor = '#000000') {
     return new THREE.CanvasTexture(canvas);
 }
 
-// Textures for each face
+// Cube materials
 const materials = [
-    new THREE.MeshBasicMaterial({ map: createTextTexture('(ಥ‿ಥ)') }),       // right
-    new THREE.MeshBasicMaterial({ map: createTextTexture('(Θ︹Θ)') }),       // left
-    new THREE.MeshBasicMaterial({ map: createTextTexture('( ͡° ͜ʖ ͡° )') }), // top
-    new THREE.MeshBasicMaterial({ map: createTextTexture('(ᗒᗣᗕ)') }),       // bottom
-    new THREE.MeshBasicMaterial({ map: createTextTexture('(⌐■_■)') }),    // front
-    new THREE.MeshBasicMaterial({ map: createTextTexture('(●´⌓`●)') })    // back
+    new THREE.MeshBasicMaterial({ map: createTextTexture('(ಥ‿ಥ)') }),
+    new THREE.MeshBasicMaterial({ map: createTextTexture('(Θ︹Θ)') }),
+    new THREE.MeshBasicMaterial({ map: createTextTexture('( ͡° ͜ʖ ͡° )') }),
+    new THREE.MeshBasicMaterial({ map: createTextTexture('(ᗒᗣᗕ)') }),
+    new THREE.MeshBasicMaterial({ map: createTextTexture('(⌐■_■)') }),
+    new THREE.MeshBasicMaterial({ map: createTextTexture('(●´⌓`●)') })
 ];
 
 // Cube setup
@@ -43,7 +42,7 @@ const cube = new THREE.Mesh(geometry, materials);
 cube.rotation.set(0.4, 0.7, 0);
 scene.add(cube);
 
-// Camera position
+// Camera
 let targetCameraZ = 2;
 camera.position.z = targetCameraZ;
 
@@ -52,13 +51,12 @@ let touchStartY = 0;
 let touchDelta = 0;
 const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
-// Desktop scroll zoom
+// Scroll zoom
 window.addEventListener("wheel", (event) => {
     targetCameraZ += event.deltaY * 0.003;
     targetCameraZ = Math.min(Math.max(targetCameraZ, 2), 5);
 });
 
-// Mobile touch zoom
 window.addEventListener("touchstart", (event) => {
     touchStartY = event.touches[0].clientY;
 });
@@ -66,31 +64,52 @@ window.addEventListener("touchstart", (event) => {
 window.addEventListener("touchmove", (event) => {
     const touchY = event.touches[0].clientY;
     touchDelta = touchStartY - touchY;
-
     targetCameraZ += touchDelta * 0.01;
     targetCameraZ = Math.min(Math.max(targetCameraZ, 2), 5);
-
     touchStartY = touchY;
 });
+
+// Floating setup
+let velocity = new THREE.Vector3(
+    (Math.random() - 0.5) * 0.005,
+    (Math.random() - 0.5) * 0.005,
+    0
+);
 
 // Animation loop
 function animate() {
     requestAnimationFrame(animate);
 
-    // Smooth zoom
+    // Smooth camera zoom
     camera.position.z += (targetCameraZ - camera.position.z) * 0.05;
 
     // Constant rotation
-    const ROTATION_SPEED = 0.01; // moderate speed
+    const ROTATION_SPEED = 0.01;
     cube.rotation.x += ROTATION_SPEED;
     cube.rotation.y += ROTATION_SPEED;
 
-    // Extra rotation on mobile from touch
+    // Extra rotation on mobile
     if (isMobile && Math.abs(touchDelta) > 0) {
         cube.rotation.y += touchDelta * 0.002;
         cube.rotation.x += touchDelta * 0.001;
-        touchDelta *= 0.9; // decay
+        touchDelta *= 0.9;
     }
+
+    // Floating movement
+    cube.position.add(velocity);
+
+    // Bounce off screen bounds
+    const bounds = 1.5;
+    if (cube.position.x > bounds || cube.position.x < -bounds) velocity.x *= -1;
+    if (cube.position.y > bounds || cube.position.y < -bounds) velocity.y *= -1;
+
+    // Slight random acceleration
+    velocity.x += (Math.random() - 0.5) * 0.0005;
+    velocity.y += (Math.random() - 0.5) * 0.0005;
+
+    // Clamp velocity
+    velocity.x = THREE.MathUtils.clamp(velocity.x, -0.01, 0.01);
+    velocity.y = THREE.MathUtils.clamp(velocity.y, -0.01, 0.01);
 
     renderer.render(scene, camera);
 }
