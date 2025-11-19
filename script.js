@@ -26,8 +26,8 @@ const lockedRotation = { x: 0, y: 0 };
 
 // Scroll control (desktop)
 window.addEventListener("wheel", (event) => {
-    targetCameraZ += event.deltaY * 0.003; // smaller increment for smoothness
-    targetCameraZ = Math.min(Math.max(targetCameraZ, 2), 5); // clamp
+    targetCameraZ += event.deltaY * 0.003;
+    targetCameraZ = Math.min(Math.max(targetCameraZ, 2), 5);
 });
 
 // Touch control (mobile)
@@ -40,11 +40,14 @@ window.addEventListener("touchstart", (event) => {
 
 window.addEventListener("touchmove", (event) => {
     const touchY = event.touches[0].clientY;
-    touchDelta = touchStartY - touchY; // swipe up = zoom in
-    targetCameraZ += touchDelta * 0.01; // adjust sensitivity
-    targetCameraZ = Math.min(Math.max(targetCameraZ, 2), 5); // clamp
+    touchDelta = touchStartY - touchY;
+    targetCameraZ += touchDelta * 0.01;
+    targetCameraZ = Math.min(Math.max(targetCameraZ, 2), 5);
     touchStartY = touchY;
 });
+
+// Detect mobile
+const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
 // Animation
 function animate() {
@@ -53,27 +56,31 @@ function animate() {
     // Smooth camera zoom using easing
     camera.position.z += (targetCameraZ - camera.position.z) * 0.05;
 
-    // Calculate zoom factor (0 = close, 1 = far)
+    // Zoom factor
     let t = (camera.position.z - 2) / (5 - 2);
-    t = Math.min(Math.max(t, 0), 1); // clamp 0-1
+    t = Math.min(Math.max(t, 0), 1);
 
     if (t < 0.2) {
-        // Almost zoomed in: lock rotation
         cube.rotation.x = lockedRotation.x;
         cube.rotation.y = lockedRotation.y;
     } else {
-        // Zoomed out: rotate cube
         const speed = t * 0.02;
 
         // Desktop rotation
         cube.rotation.x += speed;
         cube.rotation.y += speed;
 
-        // Mobile extra rotation based on swipe
-        if (Math.abs(touchDelta) > 0) {
-            cube.rotation.y += touchDelta * 0.002; // horizontal rotation
-            cube.rotation.x += touchDelta * 0.001; // vertical rotation
-            touchDelta *= 0.9; // decay delta for smooth stop
+        if (isMobile) {
+            // Continuous slow rotation on mobile
+            cube.rotation.x += 0.01;
+            cube.rotation.y += 0.015;
+
+            // Add touch-based extra rotation
+            if (Math.abs(touchDelta) > 0) {
+                cube.rotation.y += touchDelta * 0.002;
+                cube.rotation.x += touchDelta * 0.001;
+                touchDelta *= 0.9; // decay
+            }
         }
     }
 
