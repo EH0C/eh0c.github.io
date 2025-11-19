@@ -68,12 +68,41 @@ body {
 }
 
 #skills h2,
+#about h2,
 #experience h2 {
     text-align: center;
     font-size: 2em;
     color: #64ffda;
     margin-bottom: 20px;
 }
+
+/* #skills h3,
+#experience h3 {
+    text-align: center;
+    font-size: 1.5em;
+    color: #ffffff;
+    margin-bottom: 20px;
+} */
+
+/* About Me Section */
+#about h1 {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 3em;
+    font-weight: bold;
+    color: #64ffda; /* bright accent color */
+    margin: 20px 0 10px 0;
+}
+
+#about h3 {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5em;
+    font-weight: normal;
+    color: #ffffff; /* secondary color */
+    margin: 10px 0 20px 0;
+}
+
 
 .skill {
     background: #121212;
