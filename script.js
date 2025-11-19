@@ -11,14 +11,36 @@ const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById('container').appendChild(renderer.domElement);
 
+// Helper: create a canvas texture from text
+function createTextTexture(text, bgColor = '#3d3d3dff', textColor = '#000000') {
+    const canvas = document.createElement('canvas');
+    canvas.width = 256;
+    canvas.height = 256;
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = bgColor;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.font = '48px Arial';
+    ctx.fillStyle = textColor;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(text, canvas.width / 2, canvas.height / 2);
+    return new THREE.CanvasTexture(canvas);
+}
+
+// Textures for each face
+const materials = [
+    new THREE.MeshBasicMaterial({ map: createTextTexture('(ಥ‿ಥ)') }),       // right
+    new THREE.MeshBasicMaterial({ map: createTextTexture('(Θ︹Θ)') }),       // left
+    new THREE.MeshBasicMaterial({ map: createTextTexture('( ͡° ͜ʖ ͡° )') }), // top
+    new THREE.MeshBasicMaterial({ map: createTextTexture('(ᗒᗣᗕ)') }),       // bottom
+    new THREE.MeshBasicMaterial({ map: createTextTexture('(⌐■_■)') }),    // front
+    new THREE.MeshBasicMaterial({ map: createTextTexture('(●´⌓`●)') })    // back
+];
+
 // Cube setup
 const geometry = new THREE.BoxGeometry();
-const material = new THREE.MeshNormalMaterial({ wireframe: false });
-const cube = new THREE.Mesh(geometry, material);
-
-// Start with a nice angled rotation so it doesn’t look flat
+const cube = new THREE.Mesh(geometry, materials);
 cube.rotation.set(0.4, 0.7, 0);
-
 scene.add(cube);
 
 // Camera position
@@ -58,29 +80,16 @@ function animate() {
     // Smooth zoom
     camera.position.z += (targetCameraZ - camera.position.z) * 0.05;
 
-    // Zoom factor (0 = close, 1 = far)
-    let t = (camera.position.z - 2) / 3;
-    t = Math.min(Math.max(t, 0), 1);
+    // Constant rotation
+    const ROTATION_SPEED = 0.01; // moderate speed
+    cube.rotation.x += ROTATION_SPEED;
+    cube.rotation.y += ROTATION_SPEED;
 
-    // Always rotate a little
-    cube.rotation.x += 0.005;
-    cube.rotation.y += 0.006;
-
-    // Rotate faster when zoomed out
-    const speed = t * 0.03;
-    cube.rotation.x += speed;
-    cube.rotation.y += speed;
-
-    // Extra rotation on mobile
-    if (isMobile) {
-        cube.rotation.x += 0.01;
-        cube.rotation.y += 0.015;
-
-        if (Math.abs(touchDelta) > 0) {
-            cube.rotation.y += touchDelta * 0.002;
-            cube.rotation.x += touchDelta * 0.001;
-            touchDelta *= 0.9; // decay
-        }
+    // Extra rotation on mobile from touch
+    if (isMobile && Math.abs(touchDelta) > 0) {
+        cube.rotation.y += touchDelta * 0.002;
+        cube.rotation.x += touchDelta * 0.001;
+        touchDelta *= 0.9; // decay
     }
 
     renderer.render(scene, camera);
