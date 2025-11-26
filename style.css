@@ -166,3 +166,14 @@ body {
   z-index: 10;
 }
 
+#github-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 20;
+  transition: 0.3s;
+}
+
+#github-icon:hover {
+  transform: scale(1.1);
+}
