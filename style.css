@@ -75,14 +75,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* #skills h3,
-#experience h3 {
-    text-align: center;
-    font-size: 1.5em;
-    color: #ffffff;
-    margin-bottom: 20px;
-} */
-
 /* About Me Section */
 #about h1 {
     text-align: center;
@@ -114,8 +106,6 @@ body {
 .skill:hover {
     border-color: #64ffda;
 }
-
-
 
 /* Timeline */
 .timeline {
