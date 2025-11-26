@@ -1,0 +1,178 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Hero stays centered on top of cube */
+#hero-backup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+}
+
+#hero-backup h1 {
+  font-size: 4em;
+
+  margin: 0;
+}
+
+.highlight {
+    background-color: #64ffda;
+    color: #000;
+    padding: 0 8px;
+}
+
+.highlight {
+    background-color: #64ffda;
+    color: #000;
+    padding: 0 8px;
+    text-shadow:
+        0 0 5px #64ffda,
+        0 0 10px #64ffda,
+        0 0 20px #64ffda,
+        0 0 40px #64ffda;
+}
+
+
+#hero-backup h3 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+#hero-backup ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+/* Cube container slightly smaller so credentials appear closer */
+#container {
+  width: 100%;
+  height: 70vh; /* smaller than 100vh */
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#skills h2,
+#about h2,
+#experience h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #64ffda;
+    margin-bottom: 20px;
+}
+
+/* #skills h3,
+#experience h3 {
+    text-align: center;
+    font-size: 1.5em;
+    color: #ffffff;
+    margin-bottom: 20px;
+} */
+
+/* About Me Section */
+#about h1 {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 3em;
+    font-weight: bold;
+    color: #64ffda; /* bright accent color */
+    margin: 20px 0 10px 0;
+}
+
+#about h3 {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5em;
+    font-weight: normal;
+    color: #ffffff; /* secondary color */
+    margin: 10px 0 20px 0;
+}
+
+
+.skill {
+    background: #121212;
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #222;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+.skill:hover {
+    border-color: #64ffda;
+}
+
+
+
+/* Timeline */
+.timeline {
+    margin-top: 20px;
+    border-left: 2px solid #333;
+    padding-left: 20px;
+    max-width: 800px;
+    margin: 20px auto 0 auto;
+}
+.timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+}
+.tl-dot {
+    width: 12px;
+    height: 12px;
+    background: #64ffda;
+    border-radius: 50%;
+    position: absolute;
+    left: -27px;
+    top: 5px;
+}
+.tl-content h3 {
+    margin-bottom: 5px;
+}
+.tl-date {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease forwards;
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Reduce spacing between sections */
+#skills, #experience {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+/* Scroll Down prompt outside hero */
+#scroll-down {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2em;
+  color: #64ffda;
+  animation: bounce 1.5s infinite;
+  z-index: 10;
+}
+
