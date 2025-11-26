@@ -170,7 +170,7 @@ body {
   position: fixed;
   top: 20px;
   right: 20px;
-  z-index: 20;
+  z-index: 999;  /* Very high to stay on top */
   transition: 0.3s;
 }
 
